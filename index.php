@@ -3,7 +3,7 @@
 <meta charset="utf-8" /> 
 </head><body>
 <?php
-error_reporting(0); // hepsini kapatır
+error_reporting(0);
 set_time_limit(0);
 	 function siteConnect($site)
 	 {
@@ -25,12 +25,6 @@ set_time_limit(0);
 			preg_match_all('@<a class="yt-uix-sessionlink yt-uix-tile-link  spf-link  yt-ui-ellipsis yt-ui-ellipsis-2" dir="ltr" title="(.*?)"  aria-describedby="description-id-(.*?)" data-sessionlink="(.*?)" href="/watch\?v\=(.*?)">(.*?)</a>@',$site,$VideoName);
 			preg_match_all('@<ul class="yt-lockup-meta-info"><li>(.*?) görüntüleme</li><li>(.*?) (.*?) önce</li></ul>@',$site,$VideoIzlenme);
 
-				echo '<pre>';
-				//print_r($ChannelName);//Kanal İsimler
-				//print_r($AboneSayisi);//Abone Sayısı
-				//print_r($VideoName);//Video adı - Video Linki - Resim Linki
-				//print_r($VideoIzlenme);// İzlenme Sayısı - Gün
-				echo '</pre>';
 					if($VideoIzlenme[3][0] == "gün")
 					{
 						if($VideoIzlenme[2][0] == 1){
@@ -50,12 +44,9 @@ set_time_limit(0);
 					
 		return $Kanallar=$ChannelName[1];
 	 }
-	 //$Kanallar = siteConnect('https://www.youtube.com/channels/gaming');// Oyun
-	 
-	 //$Kanallar = siteConnect('https://www.youtube.com/channels/cooking_health');//Yemek sağlık
-	 $Kanallar = siteConnect('https://www.youtube.com/channels/sports');
-		
-		$say=0;
+
+	 $Kanallar = siteConnect('https://www.youtube.com/channels/ * ');
+
 		for($say=0;$say<100;$say++)
 		{
 			siteConnect('https://www.youtube.com'.$Kanallar[$say].'/videos');
