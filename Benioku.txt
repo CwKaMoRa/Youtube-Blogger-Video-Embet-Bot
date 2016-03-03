@@ -1,0 +1,11 @@
+# Youtube-Blogger-Video-Embet-Bot
+Çekmek isteginiz ana kategoriyi belirleyin.
+$Kanallar = siteConnect('https://www.youtube.com/channels/ * ');
+Sport / Games vb kategorinizi * olan yere girin.
+
+Bir sayfada max 100 kanal bulunmaktadı. Daha az kanalı çekmek isterseniz gerekli alanı değiştirmeniz gerekir.
+For döngüsünde bulunan alana değerinizi girin. Tüm kanalları çekmek için 100 girin.
+
+ Güncel videoların çekimi için tasarlanmış olan botumuz gün ve saat bazlı videoları çekmektedir. Daha eski 1 günden büyük haftalık aylık videolar için İf Mekanızmasını tamamen değiştirip döngüsel olarak bir yapıya sokmanız gerekmekte şu anda botumuz her kanaldan en son atılan videoyu alacak şekilde tasarlanmıştır. Güncel olmayan kanallar listede yer almaz listeye kanalın girmesi için son 1 gün içinde video yüklemiş olması gerekir.Tüm kanallar çekildikten sonra ekrana basılır kullanıcı videoları inceler begendiği videoyu blogunda baylaşır beğenmediği es gecer. 
+
+Versiyon : 0.01
